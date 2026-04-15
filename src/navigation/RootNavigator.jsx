@@ -47,7 +47,7 @@ export default function RootNavigator() {
 
   const ONESIGNAL_KEY = `7463892c-2baf-4313-9831-cd2fe189185d`;
 
-  const TARGET_DATA = new Date(2026, 3, 11, 8, 8, 0);
+  const TARGET_DATA = new Date(2026, 3, 17, 8, 8, 0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -124,6 +124,7 @@ export default function RootNavigator() {
         setFinalLink(parsedData.finalLink);
         setCloacaPass(parsedData.cloacaPass);
         setCustomUserAgent(parsedData.customUserAgent);
+        //setPushOpenWebview(parsedData.pushOpenWebview);
         await performAppsFlyerOperationsContinuously();
       } else {
         // Якщо дані не знайдені в AsyncStorage
@@ -155,6 +156,7 @@ export default function RootNavigator() {
         checkAsaData,
         customUserAgent,
         cloacaPass,
+        //pushOpenWebview
       };
       const jsonData = JSON.stringify(data);
       await AsyncStorage.setItem('App', jsonData);
@@ -179,6 +181,7 @@ export default function RootNavigator() {
     checkAsaData,
     cloacaPass,
     customUserAgent,
+    //pushOpenWebview
   ]);
 
   const fetchAdServicesAttributionData = async () => {
