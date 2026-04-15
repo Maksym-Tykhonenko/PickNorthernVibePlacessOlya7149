@@ -79,10 +79,10 @@ const LOADER_HTML = `
 `;
 
 export default function SplashScreen({ navigation }: any) {
-  useEffect(() => {
-    const t = setTimeout(() => navigation.replace('Onboarding'), 5000);
-    return () => clearTimeout(t);
-  }, []);
+  //useEffect(() => {
+  //  const t = setTimeout(() => navigation.replace('Onboarding'), 5000);
+  //  return () => clearTimeout(t);
+  //}, []);
 
   return (
     <ImageBackground
